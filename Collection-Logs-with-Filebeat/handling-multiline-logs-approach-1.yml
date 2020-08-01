@@ -2,7 +2,7 @@ filebeat.inputs:
   - type: log
     enabled: true
     paths:
-      - /path/to/logstash/event-data/java_errors.log
+      - /tmp/data/java_errors.log
 
     multiline.pattern: '^(\s+|\t)|(Caused by:)'
     multiline.negate: false

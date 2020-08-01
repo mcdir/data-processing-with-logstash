@@ -1,6 +1,10 @@
 This repository contains all of the configuration files used within the 
 [Data Processing with Logstash course](https://l.codingexplained.com/course/logstash?src=github).
 
+# prepare
+
+    cp -r ./data /tmp/
+
 # test for Basics/file-output.conf
 
 ```bash
@@ -11,4 +15,6 @@ curl --request PUT \
   --data '{"quantity": "1000000" }'
 ```
 
-#
+# clean up cache
+
+    rm /opt/logstash-7.4.0/data/plugins/inputs/file/.sincedb_*
